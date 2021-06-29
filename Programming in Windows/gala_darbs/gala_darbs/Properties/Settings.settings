@@ -1,0 +1,54 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="gala_darbs.Properties" GeneratedClassName="Settings">
+  <Profiles />
+  <Settings>
+    <Setting Name="WriteandQuit" Type="System.String" Scope="User">
+      <Value Profile="(Default)">wq</Value>
+    </Setting>
+    <Setting Name="Write" Type="System.String" Scope="User">
+      <Value Profile="(Default)">w</Value>
+    </Setting>
+    <Setting Name="Quit" Type="System.String" Scope="User">
+      <Value Profile="(Default)">q</Value>
+    </Setting>
+    <Setting Name="OpenFile" Type="System.String" Scope="User">
+      <Value Profile="(Default)">o</Value>
+    </Setting>
+    <Setting Name="RTB_Background" Type="System.String" Scope="User">
+      <Value Profile="(Default)">bg</Value>
+    </Setting>
+    <Setting Name="RTB_Foreground" Type="System.String" Scope="User">
+      <Value Profile="(Default)">fg</Value>
+    </Setting>
+    <Setting Name="FontSize" Type="System.String" Scope="User">
+      <Value Profile="(Default)">fs</Value>
+    </Setting>
+    <Setting Name="FontName" Type="System.String" Scope="User">
+      <Value Profile="(Default)">fn</Value>
+    </Setting>
+    <Setting Name="Curl" Type="System.String" Scope="User">
+      <Value Profile="(Default)">curl</Value>
+    </Setting>
+    <Setting Name="Add" Type="System.String" Scope="User">
+      <Value Profile="(Default)">add</Value>
+    </Setting>
+    <Setting Name="Save" Type="System.String" Scope="User">
+      <Value Profile="(Default)">save</Value>
+    </Setting>
+    <Setting Name="Help" Type="System.String" Scope="User">
+      <Value Profile="(Default)">help</Value>
+    </Setting>
+    <Setting Name="RTB_Background_Color" Type="System.Windows.Media.Color" Scope="User">
+      <Value Profile="(Default)">#FF000000</Value>
+    </Setting>
+    <Setting Name="RTB_Foreground_Color" Type="System.Windows.Media.Color" Scope="User">
+      <Value Profile="(Default)">#FFFFFFFF</Value>
+    </Setting>
+    <Setting Name="Def_FontSize" Type="System.Double" Scope="User">
+      <Value Profile="(Default)">12</Value>
+    </Setting>
+    <Setting Name="Def_FontFam" Type="System.Windows.Media.FontFamily" Scope="User">
+      <Value Profile="(Default)">Ariel</Value>
+    </Setting>
+  </Settings>
+</SettingsFile>

@@ -1,0 +1,47 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <TargetFramework>net5.0</TargetFramework>
+        <RootNamespace>Programming_in_Windows</RootNamespace>
+    </PropertyGroup>
+
+    <ItemGroup>
+      <Content Include="gala_darbs\gala_darbs.sln" />
+      <Content Include="game\.vs\game\DesignTimeBuild\.dtbcache.v2" />
+      <Content Include="game\.vs\game\v16\.suo" />
+      <Content Include="game\game.csproj" />
+      <Content Include="game\game.sln" />
+      <Content Include="game_\.vs\game_\v16\.suo" />
+      <Content Include="game_\game_.csproj" />
+      <Content Include="game_\game_.sln" />
+      <Content Include="http\.vs\http\v16\.suo" />
+      <Content Include="http\http.sln" />
+      <Content Include="Notes\.vs\Notes\v16\.suo" />
+      <Content Include="Notes\Notes.sln" />
+      <Content Include="validate\.vs\validate\DesignTimeBuild\.dtbcache.v2" />
+      <Content Include="validate\.vs\validate\v16\.suo" />
+      <Content Include="validate\validate.sln" />
+      <Content Include="win_prog3\.vs\win_prog3\v16\.suo" />
+      <Content Include="win_prog3\win_prog3.csproj" />
+      <Content Include="win_prog3\win_prog3.sln" />
+      <Content Include="win_prog_4\.vs\win_prog_4\v16\.suo" />
+      <Content Include="win_prog_4\win_prog_4.csproj" />
+      <Content Include="win_prog_4\win_prog_4.sln" />
+      <Content Include="win_prog_notepad\.vs\win_prog_notepad\v16\.suo" />
+      <Content Include="win_prog_notepad\win_prog_notepad.csproj" />
+      <Content Include="win_prog_notepad\win_prog_notepad.sln" />
+      <Content Include="wpf_gala_darbs\gala_darbs.sln" />
+      <Content Include="w_prog_1\.vs\w_prog_1\v16\.suo" />
+      <Content Include="w_prog_1\w_prog_1.csproj" />
+      <Content Include="w_prog_1\w_prog_1.sln" />
+      <Content Include="w_prog_2\.vs\w_prog_2\v16\.suo" />
+      <Content Include="w_prog_2\w_prog_2.csproj" />
+      <Content Include="w_prog_2\w_prog_2.sln" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <Folder Include="game\bin\Debug\netcoreapp3.1" />
+      <Folder Include="game\bin\Release\netcoreapp3.1" />
+    </ItemGroup>
+
+</Project>

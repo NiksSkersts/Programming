@@ -1,0 +1,106 @@
+﻿<Window x:Class="game_.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:game_"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="750" Width="750" ResizeMode="NoResize">
+    <Canvas Background="Wheat" Name="canva" Width="750" Height="750">
+        <Rectangle Height="150" Width="10" Fill="White" Canvas.Left="373" />
+        <Border BorderBrush="LightGray" BorderThickness="25" CornerRadius="0,0,45,0">
+            <Rectangle Height="150" Width="220" Canvas.Left="0" Canvas.Top="0" Fill="LightGray" />
+        </Border>
+        <Border BorderBrush="LightGray" BorderThickness="25" CornerRadius="0,0,0,45" Canvas.Left="480">
+            <Rectangle Height="150" Width="220" Canvas.Left="0" Canvas.Top="0" Fill="LightGray" />
+        </Border>
+        <Border BorderBrush="LightGray" BorderThickness="25" CornerRadius="45,0,0,0" Canvas.Left="480" Canvas.Top="550">
+            <Rectangle Height="150" Width="220" Canvas.Left="0" Canvas.Top="0" Fill="LightGray" />
+        </Border>
+        <Border BorderBrush="LightGray" BorderThickness="25" CornerRadius="0,45,0,0" Canvas.Top="550">
+            <Rectangle Height="150" Width="220" Canvas.Left="0" Canvas.Top="0" Fill="LightGray" />
+        </Border>
+        <Rectangle Height="150" Width="220" Canvas.Left="0" Canvas.Top="0" Fill="Green" />
+        <Rectangle Height="150" Width="220" Canvas.Left="530" Canvas.Top="0" Fill="Green" />
+        <Rectangle Height="150" Width="220" Canvas.Top="600" Fill="Green" />
+        <Rectangle Height="150" Width="220" Canvas.Top="600" Fill="Green" Canvas.Left="530" />
+        <Rectangle Height="120" Width="70" Fill="SlateGray" Canvas.Left="147" Canvas.Top="26" />
+        <Rectangle Height="120" Width="70" Fill="SlateGray" Canvas.Left="533" Canvas.Top="26" />
+        <Rectangle Height="120" Width="70" Fill="SlateGray" Canvas.Left="533" Canvas.Top="607" />
+        <Rectangle Height="120" Width="70" Fill="SlateGray" Canvas.Left="144" Canvas.Top="607" />
+        <Rectangle Height="70" Width="120" Fill="SlateGray" Canvas.Left="10" Canvas.Top="607" />
+        <Rectangle Height="70" Width="120" Fill="SlateGray" Canvas.Left="620" Canvas.Top="607" />
+        <Rectangle Height="70" Width="120" Fill="SlateGray" Canvas.Left="10" Canvas.Top="76" />
+        <Rectangle Height="70" Width="120" Fill="SlateGray" Canvas.Left="620" Canvas.Top="76" />
+        <Button Content="start" Click="start_Click" Name="start" Width="70" Height="20" Canvas.Left="670"
+                Canvas.Top="10" />
+        <Grid Width="20" Height="50" Background="DarkSlateGray" Canvas.Left="560" Canvas.Top="151">
+            <Grid.RowDefinitions>
+                <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>
+            </Grid.RowDefinitions>
+            <Ellipse Name="red_top" Height="15" Width="15" Fill="Black" Grid.Row="0" />
+            <Ellipse Height="15" Width="15" Fill="Black" Grid.Row="1" />
+            <Ellipse Name="red_bott" Height="15" Width="15" Fill="Green" Grid.Row="2" />
+        </Grid>
+        <Grid Width="20" Height="50" Background="DarkSlateGray" Canvas.Left="492" Canvas.Top="580">
+            <Grid.RowDefinitions>
+                <RowDefinition />
+                <RowDefinition />
+                <RowDefinition />
+            </Grid.RowDefinitions>
+            <Ellipse Name="red_top_two" Height="15" Width="15" Fill="Red" Grid.Row="0" />
+            <Ellipse Height="15" Width="15" Fill="Black" Grid.Row="1" />
+            <Ellipse Name="red_bott_two" Height="15" Width="15" Fill="Black" Grid.Row="2" />
+        </Grid>
+        <Rectangle Height="150" Width="10" Fill="White" Canvas.Left="373" Canvas.Top="600" />
+        <Rectangle Height="10" Width="220" Fill="White" Canvas.Left="530" Canvas.Top="369" />
+        <Rectangle Height="10" Width="220" Fill="White" Canvas.Left="0" Canvas.Top="369" />
+
+        <Grid Height="10" Width="220" Canvas.Left="520" Canvas.Top="281">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+            </Grid.ColumnDefinitions>
+            <Rectangle Grid.Column="1" Fill="White"></Rectangle>
+            <Rectangle Grid.Column="3" Fill="White"></Rectangle>
+        </Grid>
+        <Grid Height="10" Width="220" Canvas.Left="520" Canvas.Top="462">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition />
+                <ColumnDefinition />
+                <ColumnDefinition />
+                <ColumnDefinition />
+            </Grid.ColumnDefinitions>
+            <Rectangle Grid.Column="1" Fill="White" />
+            <Rectangle Grid.Column="3" Fill="White" />
+        </Grid>
+        <Grid Height="10" Width="220" Canvas.Left="10" Canvas.Top="462">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition />
+                <ColumnDefinition />
+                <ColumnDefinition />
+                <ColumnDefinition />
+            </Grid.ColumnDefinitions>
+            <Rectangle Grid.Column="0" Fill="White" />
+            <Rectangle Grid.Column="2" Fill="White" />
+        </Grid>
+        <Grid Height="10" Width="220" Canvas.Top="281" Canvas.Left="10">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition />
+                <ColumnDefinition />
+                <ColumnDefinition />
+                <ColumnDefinition />
+            </Grid.ColumnDefinitions>
+            <Rectangle Grid.Column="0" Fill="White" />
+            <Rectangle Grid.Column="2" Fill="White" />
+        </Grid>
+        <Rectangle Fill="Red" Name="car_one" Height="100" Width="50" Canvas.Left="285" Canvas.Top="41" />
+        <Rectangle Fill="Green" x:Name="car_two" Height="100" Width="50" Canvas.Left="409" Canvas.Top="607" />
+        <Rectangle Fill="Yellow" x:Name="car_three" Height="50" Width="100" Canvas.Left="533" Canvas.Top="393" />
+        <Rectangle Fill="Silver" x:Name="car_four" Height="50" Width="100" Canvas.Left="117" Canvas.Top="305" />
+    </Canvas>
+</Window>

@@ -1,0 +1,103 @@
+﻿<Window
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:Default="clr-namespace:gala_darbs" x:Class="gala_darbs.MainWindow"
+    mc:Ignorable="d" Icon="icon2.png"
+    Name="windows"
+    Title="Notes" WindowStyle="None" MinHeight="800" MinWidth="1000" AllowsTransparency="True" Background="Transparent"
+    KeyDown="textbox_KeyDown">
+    <DockPanel AllowDrop="True" Margin="7" LastChildFill="True" Background="Black" DragEnter="DockPanel_DragEnter"
+               Drop="DockPanel_Drop">
+        <Grid DockPanel.Dock="Top" Height="30"
+              Background="{Binding Source={x:Static SystemParameters.WindowGlassBrush}}">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="200"></ColumnDefinition>
+                <ColumnDefinition />
+                <ColumnDefinition Width="83"></ColumnDefinition>
+                <ColumnDefinition Width="40"></ColumnDefinition>
+                <ColumnDefinition Width="40"></ColumnDefinition>
+                <ColumnDefinition Width="40" />
+            </Grid.ColumnDefinitions>
+            <TextBlock Grid.Column="0" Grid.ColumnSpan="4" PreviewMouseLeftButtonDown="Grid_PreviewMouseLeftButtonDown"
+                       MouseRightButtonDown="Grid_MouseRightButtonDown">
+            </TextBlock>
+            <TextBlock Name="setter" IsEnabled="True" Text="Faili" Foreground="White" Background="Transparent"
+                       FontSize="20" Grid.Column="0" HorizontalAlignment="Center" />
+            <Button Background="Transparent" Grid.Column="5" Foreground="White" Click="Button_Click" Content="Exit"
+                    BorderBrush="WhiteSmoke" Margin="2" />
+            <Button Background="Transparent" Grid.Column="4" Foreground="White" Click="Button_Click_1" Content="Min"
+                    BorderBrush="WhiteSmoke" Margin="2" />
+
+        </Grid>
+        <Grid Width="200">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="20"></RowDefinition>
+                <RowDefinition></RowDefinition>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition></ColumnDefinition>
+            </Grid.ColumnDefinitions>
+            <Button BorderBrush="White" BorderThickness="1" Background="Transparent" Foreground="White"
+                    Click="New_Page_Button" Content="New Page" Grid.Row="0">
+            </Button>
+            <ListBox SelectionMode="Single" VirtualizingStackPanel.IsVirtualizing="False" BorderBrush="White"
+                     Grid.Row="1" VerticalContentAlignment="Center" BorderThickness="1" Background="Black"
+                     x:Name="listview" Width="200" DockPanel.Dock="Left" SelectionChanged="listview_SelectionChanged">
+                <ListBox.ContextMenu>
+                    <ContextMenu>
+                        <MenuItem Header="Open" Click="Open_From_Disk" />
+                        <MenuItem Header="Settings" Click="Settings" />
+                    </ContextMenu>
+                </ListBox.ContextMenu>
+                <ListBox.ItemTemplate>
+                    <DataTemplate>
+                        <TextBox LostFocus="TextBox_LostFocus" MouseDoubleClick="Mouse_RenameEntry"
+                                 IsReadOnly="{Binding IsEnabled, ElementName=setter, FallbackValue=True, TargetNullValue=True}"
+                                 BorderThickness="0" Foreground="White" Background="Transparent"
+                                 Text="{Binding Header}" TextWrapping="Wrap" AutomationProperties.Name="ListItemBox" />
+                    </DataTemplate>
+                </ListBox.ItemTemplate>
+                <ListBox.Resources>
+                    <ContextMenu x:Key="ItemContextMenu">
+                        <MenuItem Header="Remove Entry" Click="RemoveEntry"></MenuItem>
+                        <MenuItem Header="Rename Entry" Click="RenameEntry"></MenuItem>
+                        <MenuItem Header="Save To Disk" Click="Save_To_Disk_Click" />
+                    </ContextMenu>
+                </ListBox.Resources>
+                <ListBox.ItemContainerStyle>
+                    <Style TargetType="{x:Type ListBoxItem}">
+                        <Setter Property="ContextMenu" Value="{StaticResource ItemContextMenu}" />
+                    </Style>
+                </ListBox.ItemContainerStyle>
+            </ListBox>
+        </Grid>
+        <Grid DockPanel.Dock="Bottom">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition />
+                <ColumnDefinition />
+                <ColumnDefinition />
+                <ColumnDefinition />
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition />
+            </Grid.RowDefinitions>
+            <TextBlock Background="Transparent" TextAlignment="Left" Foreground="White" FontStyle="Oblique"
+                       x:Name="char" Grid.Column="0" IsEnabled="False" />
+            <TextBlock Background="Transparent" TextAlignment="Left" Foreground="White" FontStyle="Oblique"
+                       x:Name="show_mode" Grid.Column="1" IsEnabled="False" />
+            <TextBox Background="Transparent" Foreground="White" FontStyle="Oblique" x:Name="menu" Grid.Column="2"
+                     Grid.ColumnSpan="2" IsReadOnly="True" />
+        </Grid>
+        <RichTextBox AllowDrop="True" BorderThickness="0" FontFamily="{Binding FontName}" FontSize="{Binding FontSize}"
+                     Background="{Binding RTB_Color}" Foreground="{Binding RTB_FG_Color}"
+                     TextChanged="textbox_TextChanged" x:Name="textbox" DockPanel.Dock="Bottom" IsReadOnly="True">
+            <FlowDocument>
+                <Paragraph>
+                    <Run Text="" />
+                </Paragraph>
+            </FlowDocument>
+        </RichTextBox>
+    </DockPanel>
+</Window>

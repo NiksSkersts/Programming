@@ -1,0 +1,4 @@
+1;circle;4;radius;24;false;
+3;triangle;9;hypotension;16;false;
+5;square;2;height;5;true;
+7;pentagon;10;radius;90;true;

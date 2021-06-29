@@ -1,0 +1,13 @@
+1st: Windows  - W[a-z]{6} vai Regex R[a-z]{4}[^a-z]
+
+2nd: It19055 - \w{2}\d{4}5
+
+3rd: LV pasta indeksi -  LV-\d{4}
+
+4th: Kursa kodi - [A-Z][a-z]{2}[A-Z]\d{4}
+
+InfT2033 jeb Programmēšana Windows vidē ietvaros - IT19055, IT19054, IT19053 apgūst Regex. Process norisinās pilsētā Jelgava ar pasta kodu LV-3001. Vai arī LV-4729? DatZ0000 un Datz0000 savukārt ir totally made up kursi. 
+
+P.S Windoge is a better OS.
+
+Regards, IT19055.

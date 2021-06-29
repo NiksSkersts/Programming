@@ -1,0 +1,33 @@
+﻿<Window x:Class="win_prog_notepad.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:win_prog_notepad"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+
+    <DockPanel>
+        <Menu DockPanel.Dock="Top">
+            <MenuItem Header="file">
+                <MenuItem Click="MenuItem_Click_1" Header="new"></MenuItem>
+                <MenuItem Click="MenuItem_Click_3" Header="open"></MenuItem>
+                <MenuItem Click="MenuItem_Click" Header="save"></MenuItem>
+                <MenuItem Click="MenuItem_Click_2" Header="save as"></MenuItem>
+            </MenuItem>
+            <MenuItem Header="text">
+                <MenuItem Click="MenuItem_Click_4" Header="format"></MenuItem>
+                <MenuItem Name="wordwrap" Header="wordwrap" IsCheckable="True"></MenuItem>
+            </MenuItem>
+        </Menu>
+        <TextBlock Name="char_text" DockPanel.Dock="Bottom" IsEnabled="False">
+        </TextBlock>
+        <RichTextBox TextChanged="box_100" Name="textbox" DockPanel.Dock="Bottom">
+            <FlowDocument>
+                <Paragraph>
+                    <Run Text="" />
+                </Paragraph>
+            </FlowDocument>
+        </RichTextBox>
+    </DockPanel>
+</Window>
